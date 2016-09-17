@@ -9,103 +9,53 @@
 import UIKit
 import AVFoundation
 
-class ViewController: UIViewController, AVAudioRecorderDelegate {
+class ViewController: UIViewController {
     
-    @IBOutlet var mainButton: UIButton!
-    var recordingSession: AVAudioSession!
-    var audioRecorder: AVAudioRecorder!
+    let recordSettings = [AVSampleRateKey : NSNumber(value: Float(44100.0)),
+                          AVFormatIDKey : NSNumber(value: Int32(kAudioFormatMPEG4AAC)),
+                          AVNumberOfChannelsKey : NSNumber(value: 1),
+                          AVEncoderAudioQualityKey : NSNumber(value: Int32(AVAudioQuality.medium.rawValue))]
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        recordingSession = AVAudioSession.sharedInstance()
-        
+        let audioSession = AVAudioSession.sharedInstance()
         do {
-            try recordingSession.setCategory(AVAudioSessionCategoryPlayAndRecord)
-            try recordingSession.setActive(true)
-            recordingSession.requestRecordPermission() { [unowned self] allowed in
-                DispatchQueue.main.async {
-                    if allowed {
-                        self.loadRecordingUI()
-                        
-                    } else {
-                        // failed to record!
-                        let message = "Failed to record!"
-                        let errorM = UIAlertController(title: "ERROR", message: message, preferredStyle: .alert)
-                        let okAction = UIAlertAction(title: "Okay", style: .destructive, handler: nil)
-                        errorM.addAction(okAction)
-                        
-                    }
-                }
-            }
-        } catch {
-            // failed to record!
-            let message = "Failed to record!"
-            let errorM = UIAlertController(title: "ERROR", message: message, preferredStyle: .alert)
-            let okAction = UIAlertAction(title: "Okay", style: .destructive, handler: nil)
-            errorM.addAction(okAction)
+            try audioSession.setCategory(AVAudioSessionCategoryPlayAndRecord)
+            let audioRecorder = try AVAudioRecorder(url: self.directoryURL()! as URL, settings: recordSettings)
+            audioRecorder.prepareToRecord()
         }
-    }
-    
-    func loadRecordingUI() {
-        mainButton.setTitle("C", for: .normal)
-        mainButton.addTarget(self, action: #selector(recordTapped), for: .touchUpInside)
-        view.addSubview(mainButton)
-    }
-    
-    func startRecording() {
-        let audioFilename = getDocumentsDirectory().appendingPathComponent("recording.m4a")
-        
-        let settings = [
-            AVFormatIDKey: Int(kAudioFormatMPEG4AAC),
-            AVSampleRateKey: 12000,
-            AVNumberOfChannelsKey: 1,
-            AVEncoderAudioQualityKey: AVAudioQuality.high.rawValue
-        ]
-        
-        do {
-            audioRecorder = try AVAudioRecorder(url: audioFilename, settings: settings)
-            audioRecorder.delegate = self
-            audioRecorder.record()
+        catch {
             
-            mainButton.setTitle("X", for: .normal)
-        } catch {
-            finishRecording(success: false)
         }
     }
-    
-    func getDocumentsDirectory() -> URL {
-        let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
-        let documentsDirectory = paths[0]
-        return documentsDirectory
-    }
-    
-    func finishRecording(success: Bool) {
-        audioRecorder.stop()
-        audioRecorder = nil
-        
-        if success {
-            mainButton.setTitle("C", for: .normal)
-        } else {
-            mainButton.setTitle("C", for: .normal)
-            let message = "Failed to record!"
-            let errorM = UIAlertController(title: "ERROR", message: message, preferredStyle: .alert)
-            let okAction = UIAlertAction(title: "Okay", style: .destructive, handler: nil)
-            errorM.addAction(okAction)
-        }
-    }
-    
-    func recordTapped() {
-        if audioRecorder == nil {
-            startRecording()
-        } else {
-            finishRecording(success: true)
-        }
-    }
-    
-    func audioRecorderDidFinishRecording(_ recorder: AVAudioRecorder, successfully flag: Bool) {
-        if !flag {
-            finishRecording(success: false)
-        }
-    }
-}
 
+    func directoryURL() -> NSURL? {
+        let fileManager = FileManager.default
+        let urls = fileManager.urls(for: .documentDirectory, in: .userDomainMask)
+        let documentDirectory = urls[0] as NSURL
+        let soundURL = documentDirectory.appendingPathComponent("sound.m4a")
+        return soundURL as NSURL?
+    }
+    @IBAction func mainButton(_ sender: UIButton) {
+        if !audioRecorder.recording {
+            let audioSession = AVAudioSession.sharedInstance()
+            do {
+                try audioSession.setActive(true)
+                audioRecorder.record
+            } catch{
+                
+            }
+        }
+        else if audioRecorder.recording {
+            audioRecorder.stop()
+            let audioSession = AVAudioSession.sharedInstance()
+            
+            do {
+                try audioSession.setActive(false)
+            } catch {
+                
+        }
+    }
+    
+        
+}
