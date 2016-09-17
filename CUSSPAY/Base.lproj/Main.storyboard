@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A313a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="NIG-24-1d7">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="SFP-p6-Q1z">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
@@ -22,9 +22,6 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A1D-Rp-BFU">
                                 <fontDescription key="fontDescription" type="system" pointSize="350"/>
                                 <state key="normal" title="C"/>
-                                <connections>
-                                    <action selector="mainButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tF4-iR-9vR"/>
-                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="1" colorSpace="calibratedRGB"/>
@@ -36,17 +33,17 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="mainButton" destination="A1D-Rp-BFU" id="cqg-AP-zM6"/>
+                        <outlet property="mainButton" destination="A1D-Rp-BFU" id="38Q-xz-1Ii"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="977" y="-628"/>
+            <point key="canvasLocation" x="1852" y="-913"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="yYo-Qh-kT4">
             <objects>
-                <viewController id="NIG-24-1d7" customClass="ViewController" customModule="CUSSPAY_Welcome_Page" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="NIG-24-1d7" customClass="ViewController" customModule="CUSSPAY" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="OaQ-WA-gL2"/>
                         <viewControllerLayoutGuide type="bottom" id="zRF-WJ-cvm"/>
@@ -156,6 +153,9 @@
                                 <frame key="frameInset" minX="164" minY="379" width="46" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="OKAY"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" identifier="Okay" id="cpx-b4-UBb"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="INSTRUCTIONS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zgy-ej-1iZ">
                                 <frame key="frameInset" minX="116" minY="130" width="190" height="21"/>
@@ -164,17 +164,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Ti-VP-qYt">
-                                <frame key="frameInset" minX="16" minY="28" width="64" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <state key="normal" title="Log Out"/>
-                                <connections>
-                                    <segue destination="NIG-24-1d7" kind="show" identifier="InstructionsSwitchToWelcome" id="5nq-Xd-1dN">
-                                        <nil key="action"/>
-                                    </segue>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="C = Tap to Start Recording" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DFT-MD-vZz">
                                 <frame key="frameInset" minX="73" minY="218" width="237" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -188,7 +177,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="swS-EO-p5V" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="976.79999999999995" y="167.76611694152925"/>
+            <point key="canvasLocation" x="1038" y="-913"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="atX-l1-bWt">
@@ -389,11 +378,6 @@
                                 <state key="normal" title="Log In">
                                     <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
-                                <connections>
-                                    <segue destination="SFP-p6-Q1z" kind="show" identifier="LoginSwitchToInstructions" id="fdL-e4-LRJ">
-                                        <nil key="action"/>
-                                    </segue>
-                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
