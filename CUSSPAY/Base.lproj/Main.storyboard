@@ -43,7 +43,7 @@
         <!--View Controller-->
         <scene sceneID="yYo-Qh-kT4">
             <objects>
-                <viewController id="NIG-24-1d7" customClass="ViewController" customModule="CUSSPAY_Welcome_Page" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="NIG-24-1d7" customClass="ViewController" customModule="CUSSPAY" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="OaQ-WA-gL2"/>
                         <viewControllerLayoutGuide type="bottom" id="zRF-WJ-cvm"/>
@@ -52,8 +52,51 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lHN-wg-JQZ">
+                                <frame key="frameInset" minX="149" minY="349" width="92" height="56"/>
+                                <color key="backgroundColor" red="1" green="0.358026452" blue="0.25383177870000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="92" id="45S-Er-seT"/>
+                                    <constraint firstAttribute="height" constant="56" id="70E-C4-lze"/>
+                                    <constraint firstAttribute="width" constant="92" id="9cM-H9-iSz"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="56" id="MhT-Ix-oht"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="Sign Up">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="rnh-8g-C6S" kind="show" identifier="SignUpSwitch" id="zY1-yc-glq">
+                                        <nil key="action"/>
+                                    </segue>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4XC-aM-6PE">
+                                <attributedString key="attributedText">
+                                    <fragment content="C#$!PAY">
+                                        <attributes>
+                                            <color key="NSColor" red="1" green="0.27788220540000003" blue="0.21699815680000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="28" name="AndaleMono"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <color key="highlightedColor" red="0.97716329660000001" green="1" blue="0.97844606489999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="CUSSPAYLogo" translatesAutoresizingMaskIntoConstraints="NO" id="NbO-Rv-1f3">
+                                <frame key="frameInset" minX="145" minY="229" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="Y2a-5b-uJL"/>
+                                    <constraint firstAttribute="width" constant="100" id="i8v-C0-670"/>
+                                </constraints>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ATV-h8-H2M">
-                                <frame key="frameInset" minX="149" minY="400" width="92" height="54"/>
+                                <frame key="frameInset" minX="149" minY="420" width="92" height="54"/>
                                 <color key="backgroundColor" red="1" green="0.358026452" blue="0.25383177870000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="54" id="Nnd-jb-gxJ"/>
@@ -73,54 +116,18 @@
                                     </segue>
                                 </connections>
                             </button>
-                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lHN-wg-JQZ">
-                                <color key="backgroundColor" red="1" green="0.358026452" blue="0.25383177870000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="56" id="70E-C4-lze"/>
-                                    <constraint firstAttribute="width" constant="92" id="9cM-H9-iSz"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                <state key="normal" title="Sign Up">
-                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="10"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <segue destination="rnh-8g-C6S" kind="show" identifier="SignUpSwitch" id="zY1-yc-glq">
-                                        <nil key="action"/>
-                                    </segue>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4XC-aM-6PE">
-                                <frame key="frameInset" minX="128" minY="46" width="135" height="62"/>
-                                <attributedString key="attributedText">
-                                    <fragment content="C#$!PAY">
-                                        <attributes>
-                                            <color key="NSColor" red="1" green="0.27788220540000003" blue="0.21699815680000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <font key="NSFont" size="28" name="AndaleMono"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                        </attributes>
-                                    </fragment>
-                                </attributedString>
-                                <color key="highlightedColor" red="0.97716329660000001" green="1" blue="0.97844606489999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="CUSSPAYLogo.png" translatesAutoresizingMaskIntoConstraints="NO" id="NbO-Rv-1f3">
-                                <frame key="frameInset" minX="84" minY="107" width="206" height="204"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                         <color key="tintColor" red="1" green="0.044948555049999998" blue="0.049446748380000002" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="4XC-aM-6PE" firstAttribute="centerX" secondItem="lHN-wg-JQZ" secondAttribute="centerX" id="0pU-eS-nZd"/>
                             <constraint firstItem="4XC-aM-6PE" firstAttribute="top" secondItem="OaQ-WA-gL2" secondAttribute="bottom" constant="159" id="EJG-QB-anN"/>
+                            <constraint firstItem="NbO-Rv-1f3" firstAttribute="centerX" secondItem="aOw-Tb-qcX" secondAttribute="centerX" id="FP3-v8-aym"/>
                             <constraint firstItem="lHN-wg-JQZ" firstAttribute="leading" secondItem="aOw-Tb-qcX" secondAttribute="leading" constant="149" id="Gxi-DL-6UA"/>
                             <constraint firstAttribute="trailingMargin" secondItem="4XC-aM-6PE" secondAttribute="trailing" constant="96" id="IOE-R2-bXC"/>
                             <constraint firstItem="lHN-wg-JQZ" firstAttribute="trailing" secondItem="ATV-h8-H2M" secondAttribute="trailing" id="LOk-UE-m63"/>
                             <constraint firstItem="zRF-WJ-cvm" firstAttribute="top" secondItem="ATV-h8-H2M" secondAttribute="bottom" constant="213" id="U0k-0Y-qBc"/>
+                            <constraint firstItem="NbO-Rv-1f3" firstAttribute="centerY" secondItem="aOw-Tb-qcX" secondAttribute="centerY" id="eFK-8j-uEt"/>
                             <constraint firstItem="ATV-h8-H2M" firstAttribute="top" secondItem="lHN-wg-JQZ" secondAttribute="bottom" constant="15" id="rw2-aY-n82"/>
                             <constraint firstItem="lHN-wg-JQZ" firstAttribute="top" secondItem="4XC-aM-6PE" secondAttribute="bottom" constant="88" id="uah-qr-hwm"/>
                         </constraints>
@@ -190,7 +197,7 @@
         <!--View Controller-->
         <scene sceneID="atX-l1-bWt">
             <objects>
-                <viewController id="rnh-8g-C6S" sceneMemberID="viewController">
+                <viewController id="rnh-8g-C6S" customClass="ViewController" customModule="CUSSPAY" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="4Uk-BI-5NY"/>
                         <viewControllerLayoutGuide type="bottom" id="J8V-WG-9i5"/>
@@ -301,6 +308,10 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="firstNameTextField" destination="QWa-3Q-DDB" id="KiJ-3u-hv3"/>
+                        <outlet property="lastNameTextField" destination="VG5-s4-THs" id="IHR-eF-MkM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LJt-Re-Xxg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -402,10 +413,10 @@
         </scene>
     </scenes>
     <resources>
-        <image name="CUSSPAYLogo.png" width="16" height="16"/>
+        <image name="CUSSPAYLogo" width="792" height="612"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Ybm-3c-FgQ"/>
-        <segue reference="hyO-Fo-PYl"/>
+        <segue reference="sND-Z8-7bj"/>
+        <segue reference="6Oq-sp-OmM"/>
     </inferredMetricsTieBreakers>
 </document>

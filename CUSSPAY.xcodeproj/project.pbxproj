@@ -7,19 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		373FA6021D8D92E000B74855 /* CUSSPAYLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 373FA6011D8D92E000B74855 /* CUSSPAYLogo.png */; };
+		3797910C1D8D8D13004C5C39 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3797910B1D8D8D13004C5C39 /* Images.xcassets */; };
 		3B4C2AD11D8CFA2E00C08828 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B4C2AD01D8CFA2E00C08828 /* AppDelegate.swift */; };
 		3B4C2AD31D8CFA2E00C08828 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B4C2AD21D8CFA2E00C08828 /* ViewController.swift */; };
 		3B4C2AD61D8CFA2E00C08828 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B4C2AD41D8CFA2E00C08828 /* Main.storyboard */; };
-		3B4C2AD81D8CFA2E00C08828 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B4C2AD71D8CFA2E00C08828 /* Assets.xcassets */; };
 		3B4C2ADB1D8CFA2E00C08828 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B4C2AD91D8CFA2E00C08828 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		373FA6011D8D92E000B74855 /* CUSSPAYLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = CUSSPAYLogo.png; path = ../CUSSPAYLogo.png; sourceTree = "<group>"; };
+		3797910B1D8D8D13004C5C39 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		3B4C2ACD1D8CFA2D00C08828 /* CUSSPAY.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CUSSPAY.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B4C2AD01D8CFA2E00C08828 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3B4C2AD21D8CFA2E00C08828 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		3B4C2AD51D8CFA2E00C08828 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		3B4C2AD71D8CFA2E00C08828 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3B4C2ADA1D8CFA2E00C08828 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3B4C2ADC1D8CFA2E00C08828 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -35,9 +37,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		373FA6001D8D92D000B74855 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				373FA6011D8D92E000B74855 /* CUSSPAYLogo.png */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
 		3B4C2AC41D8CFA2D00C08828 = {
 			isa = PBXGroup;
 			children = (
+				373FA6001D8D92D000B74855 /* Resources */,
 				3B4C2ACF1D8CFA2D00C08828 /* CUSSPAY */,
 				3B4C2ACE1D8CFA2D00C08828 /* Products */,
 			);
@@ -57,9 +68,9 @@
 				3B4C2AD01D8CFA2E00C08828 /* AppDelegate.swift */,
 				3B4C2AD21D8CFA2E00C08828 /* ViewController.swift */,
 				3B4C2AD41D8CFA2E00C08828 /* Main.storyboard */,
-				3B4C2AD71D8CFA2E00C08828 /* Assets.xcassets */,
 				3B4C2AD91D8CFA2E00C08828 /* LaunchScreen.storyboard */,
 				3B4C2ADC1D8CFA2E00C08828 /* Info.plist */,
+				3797910B1D8D8D13004C5C39 /* Images.xcassets */,
 			);
 			path = CUSSPAY;
 			sourceTree = "<group>";
@@ -123,9 +134,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3797910C1D8D8D13004C5C39 /* Images.xcassets in Resources */,
 				3B4C2ADB1D8CFA2E00C08828 /* LaunchScreen.storyboard in Resources */,
-				3B4C2AD81D8CFA2E00C08828 /* Assets.xcassets in Resources */,
 				3B4C2AD61D8CFA2E00C08828 /* Main.storyboard in Resources */,
+				373FA6021D8D92E000B74855 /* CUSSPAYLogo.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -260,6 +272,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = CUSSPAY/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = bigredhacksthird.CUSSPAY;
@@ -272,6 +285,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = CUSSPAY/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = bigredhacksthird.CUSSPAY;
@@ -299,6 +313,7 @@
 				3B4C2AE11D8CFA2E00C08828 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

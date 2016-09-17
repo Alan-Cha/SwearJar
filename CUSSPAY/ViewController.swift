@@ -12,6 +12,8 @@ import AVFoundation
 class ViewController: UIViewController, AVAudioRecorderDelegate {
     
     @IBOutlet var mainButton: UIButton!
+    @IBOutlet weak var firstNameTextField: UITextField!
+    @IBOutlet weak var lastNameTextField: UITextField!
     var recordingSession: AVAudioSession!
     var audioRecorder: AVAudioRecorder!
     
@@ -47,9 +49,11 @@ class ViewController: UIViewController, AVAudioRecorderDelegate {
     }
     
     func loadRecordingUI() {
-        mainButton.setTitle("C", for: .normal)
-        mainButton.addTarget(self, action: #selector(recordTapped), for: .touchUpInside)
-        view.addSubview(mainButton)
+        if let button = mainButton as UIButton! {
+            button.setTitle("C", for: .normal)
+            button.addTarget(self, action: #selector(recordTapped), for: .touchUpInside)
+            view.addSubview(mainButton)
+        }
     }
     
     func startRecording() {
