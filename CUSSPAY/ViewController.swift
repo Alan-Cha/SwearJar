@@ -14,8 +14,15 @@ class ViewController: UIViewController, AVAudioRecorderDelegate {
     @IBOutlet var mainButton: UIButton!
     @IBOutlet weak var firstNameTextField: UITextField!
     @IBOutlet weak var lastNameTextField: UITextField!
+    @IBOutlet weak var balanceLabel: UILabel!
+    // Recording Audio
     var recordingSession: AVAudioSession!
     var audioRecorder: AVAudioRecorder!
+    // Update balance
+    var numberOfCurses:Int = 0
+    var oldBalance:Int = 100
+    var newBalance:String = ""
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,6 +54,8 @@ class ViewController: UIViewController, AVAudioRecorderDelegate {
             errorM.addAction(okAction)
         }
     }
+   
+    // button function from interface builder
     
     func loadRecordingUI() {
         if let button = mainButton as UIButton! {
@@ -111,5 +120,16 @@ class ViewController: UIViewController, AVAudioRecorderDelegate {
             finishRecording(success: false)
         }
     }
+    
+    @IBAction func updateBalance(sender: AnyObject) {
+        // Number of curses from Audio
+        numberOfCurses = (GETFromAPI)
+        // Subtract
+        oldBalance = Int(balanceLabel.text!)!
+        newBalance = String(oldBalance - numberOfCurses)
+        // Update balanceLabel
+        balanceLabel.text = newBalance;
+    }
+    
 }
 
