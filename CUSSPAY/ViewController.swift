@@ -12,8 +12,6 @@ import AVFoundation
 class ViewController: UIViewController, AVAudioRecorderDelegate {
     
     @IBOutlet var mainButton: UIButton!
-    @IBOutlet weak var firstNameTextField: UITextField!
-    @IBOutlet weak var lastNameTextField: UITextField!
     @IBOutlet weak var balanceLabel: UILabel!
     // Recording Audio
     var recordingSession: AVAudioSession!

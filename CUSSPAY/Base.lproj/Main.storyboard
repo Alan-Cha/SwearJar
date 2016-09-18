@@ -226,7 +226,6 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="100" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SaP-KI-gTg">
                                 <frame key="frameInset" minX="319" minY="19" width="42" height="54"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <accessibility key="accessibilityConfiguration" label="balanceCount"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="1" green="0.27611554449999998" blue="0.1700002696" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -235,7 +234,6 @@
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
-                        <outlet property="BalanceCount" destination="SaP-KI-gTg" id="mKA-WL-c5D"/>
                         <outlet property="balanceLabel" destination="SaP-KI-gTg" id="ERP-P7-8CP"/>
                     </connections>
                 </viewController>
@@ -316,7 +314,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="textColor" red="0.4979824424" green="0.49807190899999998" blue="0.4979767799" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Confirm Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FMG-0R-Pxm">
                                 <frame key="frameInset" minX="61" minY="460" width="250" height="30"/>
@@ -339,7 +337,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="NET-LE-PXC" kind="show" identifier="SignUpSwitchToLogIn" id="hyO-Fo-PYl">
+                                    <segue destination="NET-LE-PXC" kind="show" identifier="SignUpSwitchtoLogIn" id="hyO-Fo-PYl">
                                         <nil key="action"/>
                                     </segue>
                                 </connections>
@@ -379,10 +377,6 @@
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <connections>
-                        <outlet property="firstNameTextField" destination="QWa-3Q-DDB" id="KiJ-3u-hv3"/>
-                        <outlet property="lastNameTextField" destination="VG5-s4-THs" id="IHR-eF-MkM"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LJt-Re-Xxg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -440,7 +434,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="textColor" red="0.4979824424" green="0.49807190899999998" blue="0.4979767799" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oBJ-0Y-CwK">
                                 <frame key="frameInset" minX="19" minY="28" width="52" height="32"/>
@@ -491,7 +485,7 @@
         <image name="brandNewLogo" width="676" height="1031"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="sND-Z8-7bj"/>
-        <segue reference="R1w-Cq-Eds"/>
+        <segue reference="6Oq-sp-OmM"/>
+        <segue reference="hyO-Fo-PYl"/>
     </inferredMetricsTieBreakers>
 </document>
