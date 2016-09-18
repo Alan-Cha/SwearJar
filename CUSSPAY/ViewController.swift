@@ -123,12 +123,13 @@ class ViewController: UIViewController, AVAudioRecorderDelegate {
     
     @IBAction func updateBalance(sender: AnyObject) {
         // Number of curses from Audio
-        numberOfCurses = (GETFromAPI)
+        numberOfCurses = 0
         // Subtract
         oldBalance = Int(balanceLabel.text!)!
         newBalance = String(oldBalance - numberOfCurses)
         // Update balanceLabel
-        balanceLabel.text = newBalance;
+        balanceLabel.text = newBalance
+        
     }
     
 }

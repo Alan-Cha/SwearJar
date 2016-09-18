@@ -52,8 +52,26 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4XC-aM-6PE">
+                                <frame key="frameInset" minX="122" minY="46" width="135" height="62"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="SwearJar">
+                                        <attributes>
+                                            <color key="NSColor" red="1" green="0.27788220540000003" blue="0.21699815680000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="31" name="STIXGeneral-Regular"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <color key="highlightedColor" red="0.97716329660000001" green="1" blue="0.97844606489999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="brandNewLogo" translatesAutoresizingMaskIntoConstraints="NO" id="gld-HI-IAK">
+                                <frame key="frameInset" minX="72" minY="132" width="234" height="363"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ATV-h8-H2M">
-                                <frame key="frameInset" minX="142" minY="452" width="84" height="45"/>
+                                <frame key="frameInset" minX="207" minY="543" width="84" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="0.358026452" blue="0.25383177870000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
@@ -72,7 +90,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lHN-wg-JQZ">
-                                <frame key="frameInset" minX="142" minY="379" width="84" height="49"/>
+                                <frame key="frameInset" minX="94" minY="543" width="84" height="49"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="0.358026452" blue="0.25383177870000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
@@ -90,25 +108,6 @@
                                     </segue>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4XC-aM-6PE">
-                                <frame key="frameInset" minX="120" minY="125" width="135" height="62"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <attributedString key="attributedText">
-                                    <fragment content="SwearJar">
-                                        <attributes>
-                                            <color key="NSColor" red="1" green="0.27788220540000003" blue="0.21699815680000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <font key="NSFont" size="28" name="AndaleMono"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                        </attributes>
-                                    </fragment>
-                                </attributedString>
-                                <color key="highlightedColor" red="0.97716329660000001" green="1" blue="0.97844606489999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="CUSSPAYLogo" translatesAutoresizingMaskIntoConstraints="NO" id="h4x-aF-J2s">
-                                <frame key="frameInset" minX="118" minY="186" width="138" height="138"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <rect key="contentStretch" x="0.0" y="0.0" width="0.0" height="0.0"/>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                         <color key="tintColor" red="1" green="0.044948555049999998" blue="0.049446748380000002" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
@@ -489,10 +488,10 @@
         </scene>
     </scenes>
     <resources>
-        <image name="CUSSPAYLogo" width="1024" height="1024"/>
+        <image name="brandNewLogo" width="676" height="1031"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="R1w-Cq-Eds"/>
         <segue reference="sND-Z8-7bj"/>
+        <segue reference="R1w-Cq-Eds"/>
     </inferredMetricsTieBreakers>
 </document>
