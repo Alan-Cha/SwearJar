@@ -1,6 +1,6 @@
 //
 //  ViewController.swift
-//  CUSSPAY
+//  SwearJar
 //
 //  Created by Hope Jin on 9/17/16.
 //  Copyright © 2016 BigRedHacks#3. All rights reserved.
@@ -11,28 +11,21 @@ import AVFoundation
 
 class ViewController: UIViewController, AVAudioRecorderDelegate {
     
+
     @IBOutlet var mainButton: UIButton!
-    @IBOutlet weak var balanceLabel: UILabel!
+    
+  //  @IBAction func signUp (sender: UIButton) {
+    
+ //   }
+    
+    
     // Recording Audio
+
     var recordingSession: AVAudioSession!
     var audioRecorder: AVAudioRecorder!
-    // Update balance
-    var numberOfCurses:Int = 0
-    var oldBalance:Int = 100
-    var newBalance:String = ""
-    
-    // Profile
-    @IBOutlet weak var firstName: UITextField!
-    @IBOutlet weak var email: UITextField!
-    @IBOutlet weak var profileName: UITextField!
-    @IBOutlet weak var profileEmail: UITextField!
-    
-    // Open Profile
-    @IBAction func clickProfile(_ sender: AnyObject) {
-        var tempName:String = ""
-        tempName = String(profileName.text! + firstName.text)
-        profileName.text = tempName
-    }
+
+
+
     override func viewDidLoad() {
         super.viewDidLoad()
         recordingSession = AVAudioSession.sharedInstance()
@@ -134,17 +127,6 @@ class ViewController: UIViewController, AVAudioRecorderDelegate {
         }
     }
     
-    // Update the balance of credits
-    @IBAction func updateBalance(sender: AnyObject) {
-        // Number of curses from Audio
-        numberOfCurses = 0
-        // Subtract
-        oldBalance = Int(balanceLabel.text!)!
-        newBalance = String(oldBalance - numberOfCurses)
-        // Update balanceLabel
-        balanceLabel.text = newBalance
-        
-    }
     
 }
 
