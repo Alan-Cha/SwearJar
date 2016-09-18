@@ -94,7 +94,7 @@ class ViewController: UIViewController, AVAudioRecorderDelegate {
     
     func finishRecording(success: Bool) {
         audioRecorder.stop()
-        audioRecorder = nilsDADSADADS
+        audioRecorder = nil
         
         if success {
             mainButton.setTitle("C", for: .normal)
