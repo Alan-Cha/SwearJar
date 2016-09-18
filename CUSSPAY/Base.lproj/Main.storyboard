@@ -7,39 +7,6 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Record View Controller-->
-        <scene sceneID="tne-QT-ifu">
-            <objects>
-                <viewController id="BYZ-38-t0r" customClass="RecordViewController" customModule="CUSSPAY" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A1D-Rp-BFU">
-                                <fontDescription key="fontDescription" type="system" pointSize="350"/>
-                                <state key="normal" title="C"/>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="1" colorSpace="calibratedRGB"/>
-                        <constraints>
-                            <constraint firstItem="A1D-Rp-BFU" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="CB9-I8-3vj"/>
-                            <constraint firstItem="A1D-Rp-BFU" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="240" id="Oa8-Eb-ccM"/>
-                            <constraint firstItem="A1D-Rp-BFU" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="61" id="g8h-T1-kt5"/>
-                            <constraint firstItem="A1D-Rp-BFU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zKx-wT-y57"/>
-                        </constraints>
-                    </view>
-                    <connections>
-                        <outlet property="mainButton" destination="A1D-Rp-BFU" id="cqg-AP-zM6"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="706" y="-39"/>
-        </scene>
         <!--View Controller-->
         <scene sceneID="yYo-Qh-kT4">
             <objects>
@@ -178,9 +145,6 @@
                                         <integer key="value" value="10"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <segue destination="BYZ-38-t0r" kind="show" identifier="InstructionsToMic" id="cIK-fq-bPe"/>
-                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zgy-ej-1iZ">
                                 <frame key="frameInset" minX="90" minY="148" width="214" height="21"/>
@@ -520,6 +484,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="sND-Z8-7bj"/>
-        <segue reference="QpQ-et-zcV"/>
+        <segue reference="Ybm-3c-FgQ"/>
     </inferredMetricsTieBreakers>
 </document>
