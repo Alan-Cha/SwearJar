@@ -239,7 +239,7 @@
                         <outlet property="balanceLabel" destination="SaP-KI-gTg" id="ERP-P7-8CP"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="swS-EO-p5V" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="swS-EO-p5V" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1101.5999999999999" y="180.35982008995504"/>
         </scene>
@@ -386,7 +386,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LJt-Re-Xxg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-687.20000000000005" y="-628.33583208395805"/>
+            <point key="canvasLocation" x="-426" y="-851"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="p3N-4x-VMc">
@@ -461,13 +461,12 @@
                                     </segue>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9rU-Pt-MpX">
-                                <frame key="frameInset" minX="150" minY="405" width="75" height="44"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KeY-iW-6g7">
+                                <frame key="frameInset" minX="145" minY="433" width="73" height="39"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="0.358026452" blue="0.25383177870000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                 <state key="normal" title="Log In">
-                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -475,7 +474,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="SFP-p6-Q1z" kind="show" identifier="LogInSwitchToInstructions" id="Wvl-wv-VX1"/>
+                                    <segue destination="SFP-p6-Q1z" kind="show" identifier="LogInSwitchToInstructions" id="mRz-YD-sd6"/>
                                 </connections>
                             </button>
                         </subviews>

@@ -14,14 +14,14 @@ class ViewController: UIViewController, AVAudioRecorderDelegate {
     @IBOutlet var mainButton: UIButton!
     @IBOutlet weak var firstNameTextField: UITextField!
     @IBOutlet weak var lastNameTextField: UITextField!
-    @IBOutlet weak var balanceLabel: UILabel!
+    //@IBOutlet weak var balanceLabel: UILabel!
     // Recording Audio
     var recordingSession: AVAudioSession!
     var audioRecorder: AVAudioRecorder!
     // Update balance
-    var numberOfCurses:Int = 0
-    var oldBalance:Int = 100
-    var newBalance:String = ""
+    /*var numberOfCurses:Int = 0
+    var oldBalance: Int = 100
+    var newBalance: String = ""*/
     
     
     override func viewDidLoad() {
@@ -121,7 +121,7 @@ class ViewController: UIViewController, AVAudioRecorderDelegate {
         }
     }
     
-    @IBAction func updateBalance(sender: AnyObject) {
+    /*@IBAction func updateBalance(sender: AnyObject) {
         // Number of curses from Audio
         numberOfCurses = 0
         // Subtract
@@ -130,7 +130,7 @@ class ViewController: UIViewController, AVAudioRecorderDelegate {
         // Update balanceLabel
         balanceLabel.text = newBalance
         
-    }
+    }*/
     
 }
 
