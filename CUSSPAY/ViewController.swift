@@ -16,6 +16,9 @@ class ViewController: UIViewController, AVAudioRecorderDelegate {
     // @IBOutlet weak var lastNameTextField: UITextField!
     var recordingSession: AVAudioSession!
     var audioRecorder: AVAudioRecorder!
+    let keyWords = ["banana", "donald", "trashcan", "monkey", "dog", "cat"]
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -55,10 +58,10 @@ class ViewController: UIViewController, AVAudioRecorderDelegate {
     }
     
     func startRecording() {
-        let audioFilename = getDocumentsDirectory().appendingPathComponent("BASERECORDING.m4a")
+        let audioFilename = getDocumentsDirectory().appendingPathComponent("BASERECORDING.wav")
         
         let settings = [
-            AVFormatIDKey: Int(kAudioFormatMPEG4AAC),
+            AVFormatIDKey: Int(kAudioFormatLinearPCM),
             AVSampleRateKey: 12000,
             AVNumberOfChannelsKey: 1,
             AVEncoderAudioQualityKey: AVAudioQuality.high.rawValue
@@ -110,4 +113,5 @@ class ViewController: UIViewController, AVAudioRecorderDelegate {
             finishRecording(success: false)
         }
     }
+    
 }

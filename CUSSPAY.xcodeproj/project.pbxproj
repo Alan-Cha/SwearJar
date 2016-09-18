@@ -13,6 +13,7 @@
 		3B4C2AD61D8CFA2E00C08828 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B4C2AD41D8CFA2E00C08828 /* Main.storyboard */; };
 		3B4C2AD81D8CFA2E00C08828 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B4C2AD71D8CFA2E00C08828 /* Assets.xcassets */; };
 		3B4C2ADB1D8CFA2E00C08828 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B4C2AD91D8CFA2E00C08828 /* LaunchScreen.storyboard */; };
+		62252E2B1D8E05E500B93702 /* CloudConvert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62252E2A1D8E05E500B93702 /* CloudConvert.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		3B4C2ADA1D8CFA2E00C08828 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3B4C2ADC1D8CFA2E00C08828 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		591BF8EB357B91B72E7FA4AA /* Pods_CUSSPAY.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CUSSPAY.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		62252E2A1D8E05E500B93702 /* CloudConvert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CloudConvert.swift; sourceTree = "<group>"; };
 		6FE1549D938914253A49F027 /* Pods-CUSSPAY.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CUSSPAY.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CUSSPAY/Pods-CUSSPAY.debug.xcconfig"; sourceTree = "<group>"; };
 		7C1113D3929C2AB5B80129EB /* Pods-CUSSPAY.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CUSSPAY.release.xcconfig"; path = "Pods/Target Support Files/Pods-CUSSPAY/Pods-CUSSPAY.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -67,6 +69,7 @@
 				3B4C2AD71D8CFA2E00C08828 /* Assets.xcassets */,
 				3B4C2AD91D8CFA2E00C08828 /* LaunchScreen.storyboard */,
 				3B4C2ADC1D8CFA2E00C08828 /* Info.plist */,
+				62252E2A1D8E05E500B93702 /* CloudConvert.swift */,
 			);
 			path = CUSSPAY;
 			sourceTree = "<group>";
@@ -217,6 +220,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				62252E2B1D8E05E500B93702 /* CloudConvert.swift in Sources */,
 				3B4C2AD31D8CFA2E00C08828 /* ViewController.swift in Sources */,
 				3B4C2AD11D8CFA2E00C08828 /* AppDelegate.swift in Sources */,
 			);
