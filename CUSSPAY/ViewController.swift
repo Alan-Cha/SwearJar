@@ -21,7 +21,18 @@ class ViewController: UIViewController, AVAudioRecorderDelegate {
     var oldBalance:Int = 100
     var newBalance:String = ""
     
+    // Profile
+    @IBOutlet weak var firstName: UITextField!
+    @IBOutlet weak var email: UITextField!
+    @IBOutlet weak var profileName: UITextField!
+    @IBOutlet weak var profileEmail: UITextField!
     
+    // Open Profile
+    @IBAction func clickProfile(_ sender: AnyObject) {
+        var tempName:String = ""
+        tempName = String(profileName.text! + firstName.text)
+        profileName.text = tempName
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         recordingSession = AVAudioSession.sharedInstance()
@@ -53,6 +64,10 @@ class ViewController: UIViewController, AVAudioRecorderDelegate {
         }
     }
    
+    // Add 25credits for every log in that happens 24 hours or more after your previous login
+    
+    
+    
     // button function from interface builder
     
     func loadRecordingUI() {
@@ -119,6 +134,7 @@ class ViewController: UIViewController, AVAudioRecorderDelegate {
         }
     }
     
+    // Update the balance of credits
     @IBAction func updateBalance(sender: AnyObject) {
         // Number of curses from Audio
         numberOfCurses = 0
