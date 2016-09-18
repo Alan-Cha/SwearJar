@@ -490,7 +490,7 @@
         <image name="brandNewLogo" width="676" height="1031"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="sND-Z8-7bj"/>
         <segue reference="R1w-Cq-Eds"/>
+        <segue reference="sND-Z8-7bj"/>
     </inferredMetricsTieBreakers>
 </document>
